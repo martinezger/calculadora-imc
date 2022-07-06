@@ -18,3 +18,8 @@ def index(request):
 
     return render(request, "imc/index.html", {})
 
+
+def mostra_personas(request):
+    contexto = { "personas": Persona.objects.all() }
+    return render(request, "imc/mis_personas.html", contexto)
+
